@@ -23,7 +23,7 @@ y = dataset.iloc[:, 1].values
 # print(y)
 
 """## Training the Polynomial Regression model on the whole dataset"""
-
+#
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X, y)

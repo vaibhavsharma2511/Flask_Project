@@ -4,24 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fish Weight Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        label {
+            margin-top: 10px;
+        }
+        input {
+            margin-top: 5px;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4b2b;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff416c;
+        }
+        .result {
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <h1>Fish Weight Prediction</h1>
-    <form action="/predict" method="post">
-        <label for="Length1">Length1:</label><br>
-        <input type="text" id="Length1" name="Length1"><br>
-        <label for="Length2">Length2:</label><br>
-        <input type="text" id="Length2" name="Length2"><br>
-        <label for="Length3">Length3:</label><br>
-        <input type="text" id="Length3" name="Length3"><br>
-        <label for="Height">Height:</label><br>
-        <input type="text" id="Height" name="Height"><br>
-        <label for="Width">Width:</label><br>
-        <input type="text" id="Width" name="Width"><br>
-        <button type="submit">Predict</button>
-    </form>
-    {% if prediction_text %}
-    <h2>{{ prediction_text }}</h2>
-    {% endif %}
+    <div class="container">
+        <h1>Fish Weight Prediction</h1>
+        <form action="/predict" method="post">
+            <label for="Length1">Length1:</label>
+            <input type="text" id="Length1" name="Length1">
+
+            <label for="Length2">Length2:</label>
+            <input type="text" id="Length2" name="Length2">
+
+            <label for="Length3">Length3:</label>
+            <input type="text" id="Length3" name="Length3">
+
+            <label for="Height">Height:</label>
+            <input type="text" id="Height" name="Height">
+
+            <label for="Width">Width:</label>
+            <input type="text" id="Width" name="Width">
+
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <div class="result">
+            <h2>{{ prediction_text }}</h2>
+        </div>
+        {% endif %}
+    </div>
 </body>
 </html>

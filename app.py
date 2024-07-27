@@ -20,24 +20,3 @@ def predict():
 
 if __name__ == "__main__":
     app.run()
-
-# from flask import Flask # we imported the Flask class. An instance of this class will be our WSGI application
-# app = Flask(__name__) #creating the Flask class object
-#
-# @app.route('/') #We then use the route() decorator to tell Flask what URL should trigger our function.
-# def hello_world(): #function
-#     return "<p>Hello, World!</p>"
-#
-# if __name__ == "__main__": # It Allows You to Execute Code When the File Runs as a Script
-#     app.run()
-
-# from flask import Flask, redirect, url_for, request, render_template
-#
-# app = Flask(__name__)
-#
-# @app.route('/')
-# def index():
-#    return render_template('index.html')
-#
-# if __name__ == '__main__':
-#    app.run(debug = True)
