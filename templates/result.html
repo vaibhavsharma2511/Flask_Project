@@ -1,0 +1,124 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>Prediction Result</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            background: linear-gradient(to right, #00c6ff, #0072ff);-->
+<!--            color: white;-->
+<!--            display: flex;-->
+<!--            justify-content: center;-->
+<!--            align-items: center;-->
+<!--            height: 100vh;-->
+<!--            margin: 0;-->
+<!--        }-->
+<!--        .container {-->
+<!--            background: rgba(0, 0, 0, 0.5);-->
+<!--            padding: 20px;-->
+<!--            border-radius: 10px;-->
+<!--            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);-->
+<!--            text-align: center;-->
+<!--        }-->
+<!--        h1 {-->
+<!--            margin-bottom: 20px;-->
+<!--        }-->
+<!--        .result {-->
+<!--            margin-top: 20px;-->
+<!--        }-->
+<!--        button {-->
+<!--            margin-top: 20px;-->
+<!--            padding: 10px 20px;-->
+<!--            background-color: #ff4b2b;-->
+<!--            border: none;-->
+<!--            border-radius: 5px;-->
+<!--            color: white;-->
+<!--            cursor: pointer;-->
+<!--            transition: background-color 0.3s ease;-->
+<!--        }-->
+<!--        button:hover {-->
+<!--            background-color: #ff416c;-->
+<!--        }-->
+<!--        a {-->
+<!--            color: white;-->
+<!--            text-decoration: none;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <div class="container">-->
+<!--        <h1>Prediction Result</h1>-->
+<!--        <div class="result">-->
+<!--            <h2>{{ prediction_text }}</h2>-->
+<!--        </div>-->
+<!--        <button onclick="window.location.href='/'">Go Back</button>-->
+<!--    </div>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .result {
+            margin-top: 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #ff4b2b;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #ff416c;
+        }
+        a {
+            color: white;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Prediction Result</h1>
+        <div class="result">
+            <h2>{{ prediction_text }}</h2>
+            <p>Length1: {{ Length1 }}</p>
+            <p>Length2: {{ Length2 }}</p>
+            <p>Length3: {{ Length3 }}</p>
+            <p>Height: {{ Height }}</p>
+            <p>Width: {{ Width }}</p>
+        </div>
+        <button onclick="window.location.href='/'">Go Back</button>
+    </div>
+</body>
+</html>
